@@ -32,9 +32,7 @@ fn main() {
 }
 
 fn solve(board: &mut Board) {
-    let mut progress = true;
-    while progress {
-        progress = board.solve();
+    while board.solve() {
         // println!("solve step: \n{}", board);
         if !board.is_valid() {
             // println!("board invalid, return");
